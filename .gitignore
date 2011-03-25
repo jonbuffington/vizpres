@@ -1,0 +1,27 @@
+# Eclipse
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+.classpath
+.settings/
+.loadpath
+
+# Emacs
+*~
+\#*\#
+
+# IntelliJ
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Java
+*.class
+
+# Maven
+target/

@@ -1,0 +1,382 @@
+<!--
+  ~ Copyright (c) 2011 Jon Buffington. All rights reserved.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <title>Building High-Performance Data Visualizations using GWT</title>
+  <link href='http://fonts.googleapis.com/css?family=Cabin:regular,bold' rel='stylesheet' type='text/css'>
+  <link href="css/show.css" type="text/css" rel="stylesheet">
+  <script type="text/javascript" src="js/jquery-1.5.1.js"></script>
+  <script type="text/javascript" src="js/show.js"></script>
+</head>
+<body>
+<div id="instructions">
+  arrow &larr; to go left, arrow &rarr; to go right
+</div>
+<div id="slides">
+<div id="reel">
+<div class="content" id="slide-0">
+  <div class="container">
+    <h1><strong>Google Web Toolkit</strong></h1>
+
+    <h2>High-Performance Data Visualizations</h2>
+
+    <p><a href="http://twitter.com/jonbuffington/">@jonbuffington</a></p>
+  </div>
+</div>
+<div class="content" id="slide-1">
+  <div class="container">
+    <h1>High Performance</h1>
+
+    <div class="illustration">
+      <img src="images/charlie-sheen-quotes8.jpg">
+    </div>
+    <ul>
+      <li>Design</li>
+      <li>Technology</li>
+      <li>Development</li>
+    </ul>
+  </div>
+</div>
+<div class="content" id="slide-2">
+  <div class="container">
+    <h1>Introduction</h1>
+    <ul>
+      <li>Demonstration</li>
+      <li>Design Matters</li>
+      <li>Technology Overview</li>
+      <li>Short Tutorial</li>
+    </ul>
+  </div>
+</div>
+<div class="content" id="slide-3">
+  <div class="container">
+    <h1>Demonstration</h1>
+
+    <code><a href="/VizPres.html">def jam = GWT + REST + Scala</a></code>
+  </div>
+</div>
+<div class="content" id="slide-4">
+  <div class="container">
+    <h1>Design with <strong>_</strong></h1>
+    <a href="http://blog.ffctn.com/what-is-data-visualization">
+      <img src="images/DataVisualizationChart.png" alt="Data Visualization Chart"/>
+    </a>
+  </div>
+</div>
+<div class="content" id="slide-5">
+  <div class="container">
+    <h1>Design with <strong>Purpose</strong></h1>
+
+    <p>Storytelling motivates interest.</p>
+
+    <a href="http://www.nytimes.com/packages/html/newsgraphics/2011/0119-budget/index.html">
+      <img src="images/treemap.png">
+    </a>
+  </div>
+</div>
+<div class="content" id="slide-6">
+  <div class="container">
+    <h1>Design with <strong>Grace</strong></h1>
+
+    <p>Aesthetics capture attention.</p>
+
+    <div class="illustration">
+      <img src="images/grace.jpg" style="display:inline">
+    </div>
+
+    <ul>
+      <li><strong>C</strong>ontrast</li>
+      <li><strong>R</strong>epetition</li>
+      <li><strong>A</strong>lignment</li>
+      <li><strong>P</strong>roximity</li>
+    </ul>
+  </div>
+</div>
+<div class="content" id="slide-7">
+  <div class="container">
+    <h1>Design with <strong>Information</strong></h1>
+
+    <p>Information establishes credibility.</p>
+    <pre><code>
+      STATE,SEX,AGE,POP2000,POP2008
+      Alabama,M,0,30479,32055
+      Alabama,M,1,29904,32321
+      Alabama,M,2,30065,31789
+      Alabama,M,3,29932,31371
+      Alabama,M,4,30319,31164
+      Alabama,M,5,31127,31049
+      Alabama,M,6,31466,30960
+      Alabama,M,7,32287,32459
+      Alabama,M,8,32497,31586
+      Alabama,M,9,33361,30975
+      Alabama,M,10,34488,31126
+      Alabama,M,11,32884,31006
+      Alabama,M,12,32417,31283
+      Alabama,M,13,32621,32076
+      Alabama,M,14,32644,32309
+      Alabama,M,15,33070,33061
+      Alabama,M,16,32544,33132
+      Alabama,M,17,32822,33595
+      Alabama,M,18,32881,34384
+      Alabama,M,19,33201,32177
+      Alabama,M,20,33175,31200
+      Alabama,M,21,31231,31046
+      Alabama,M,22,29859,32074
+      Alabama,M,23,29439,32230
+    </code></pre>
+  </div>
+</div>
+<div class="content" id="slide-8">
+  <div class="container">
+    <img src="images/ff_bloodwork6c_f.jpg"/>
+    <div class="illustration">
+      <a href="http://www.wired.com/magazine/2010/11/ff_bloodwork/all/1"><strong>Blood Test Gets a Makeover</strong> — WIRED magazine</a>
+    </div>
+  </div>
+</div>
+<div class="content" id="slide-9">
+  <div class="container">
+    <img src="images/ff_bloodwork7_f.jpg"/>
+    <div class="illustration">
+      <a href="http://www.wired.com/magazine/2010/11/ff_bloodwork/all/1"><strong>Blood Test Gets a Makeover</strong> — WIRED magazine</a>
+    </div>
+  </div>
+</div>
+<div class="content" id="slide-10">
+  <div class="container">
+    <h1>Technology</h1>
+    <img src="images/app-arch.png" style="margin-top: 2em;">
+  </div>
+</div>
+<div class="content" id="slide-11">
+  <div class="container">
+    <h1>Graphics</h1>
+
+    <div class="illustration">
+      <img src="images/HTML5_Logo_64.png" style="display:block; padding: 1em 0;">
+      <img src="images/svg-logo-h.png" style="display:block; padding: 1em 0;">
+      <img src="images/WebGL_logo.png" style="display:block; padding: 1em 0;">
+    </div>
+    <ul>
+      <li>CSS/DOM</li>
+      <li>Canvas</li>
+      <li>SVG</li>
+      <li>WebGL</li>
+    </ul>
+  </div>
+</div>
+<div class="content" id="slide-12">
+  <div class="container">
+    <h1>Graphics Comparison</h1>
+    <table>
+      <thead>
+      <tr>
+        <td></td>
+        <td>Declaritive</td>
+        <td>Procedural</td>
+        <td>Compatibility</td>
+        <td>Tooling</td>
+        <td>Typical Use</td>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><strong>CSS/DOM</strong></td>
+        <td>&#10003;</td>
+        <td>&mdash;</td>
+        <td>•••</td>
+        <td>•••</td>
+        <td>Bar Chart, Column Chart, and Metrics</td>
+      </tr>
+      <tr>
+        <td><strong>SVG</strong></td>
+        <td>&#10003;</td>
+        <td>&mdash;</td>
+        <td>•••</td>
+        <td>••</td>
+        <td>Donut/Pie Chart, Network Diagrams, Sparklines</td>
+      </tr>
+      <tr>
+        <td><strong>Canvas 2D</strong></td>
+        <td>&mdash;</td>
+        <td>&#10003;</td>
+        <td>••</td>
+        <td>•</td>
+        <td>Quake!</td>
+      </tr>
+      <tr>
+        <td><strong>WebGL</strong></td>
+        <td>&mdash;</td>
+        <td>&#10003;</td>
+        <td>•</td>
+        <td>•</td>
+        <td>Movie-inspired Dashboards</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="content" id="slide-13">
+  <div class="container">
+    <h1>Access</h1>
+
+    <p>A <strong>ReSTful</strong> approach exploits web technologies.</p>
+
+    <img src="images/resto.png" style="margin: 30px 0">
+  </div>
+</div>
+<div class="content" id="slide-14">
+  <div class="container">
+    <h1>Client ReST Tools</h1>
+    <img src="images/RestyGWT.png">
+
+    <p><a href="http://restygwt.fusesource.org/">http://restygwt.fusesource.org/</a></p>
+
+  </div>
+</div>
+<div class="content" id="slide-15">
+  <div class="container">
+    <h1>Server ReST Tools</h1>
+
+    <h2>RESTEasy — <span>JAX-RS</span></h2>
+    <img src="images/RESTEasy.png">
+  </div>
+</div>
+<div class="content" id="slide-16">
+  <div class="container">
+    <h1>Resources</h1>
+
+    <div class="illustration">
+      <img src="images/hal-eye.jpg">
+
+      <p>&mdash; "My God, it's full of <strong>tuples</strong>"</p>
+    </div>
+
+    <ul>
+      <li>Tabular</li>
+      <li>Tree</li>
+      <li>Network</li>
+    </ul>
+  </div>
+</div>
+<div class="content" id="slide-17">
+  <div class="container">
+    <h1>Tutorial</h1>
+    <img src="images/Nerd2_dpa.jpg">
+  </div>
+</div>
+<div class="content" id="slide-18">
+  <div class="container">
+    <h1>Architecture</h1>
+    <img src="images/example-AD.png" style="margin-top: 40px;">
+  </div>
+</div>
+<div class="content" id="slide-19">
+  <div class="container">
+    <h1>Client Code</h1>
+    <pre><code>
+      ├── java
+      │   └── com
+      │       └── java33
+      │           └── vizpres
+      │               ├── client
+      │               │   ├── AppController.java
+      │               │   ├── VizPres.java
+      │               │   ├── event
+      │               │   ├── gin
+      │               │   ├── presenter
+      │               │   └── view
+      │               │       ├── cell
+      │               │       └── visualization
+      ├── resources
+      │   └── com
+      │       └── java33
+      │           └── vizpres
+      │               ├── VizPres.gwt.xml
+      │               └── client
+      │                   └── Messages.properties
+    </code></pre>
+  </div>
+</div>
+<div class="content" id="slide-20">
+  <div class="container">
+    <h1>Server Code</h1>
+    <pre><code>
+      ├── scala
+      │   └── com
+      │       └── java33
+      │           └── vizpres
+      │               └── server
+      │                   └── rv
+      └── webapp
+          ├── META-INF
+          │   └── MANIFEST.MF
+          ├── VizPres.html
+          ├── WEB-INF
+          │   └── web.xml
+          ├── css
+          ├── images
+          ├── js
+          └── presentation.html
+    </code></pre>
+  </div>
+</div>
+<div class="content" id="slide-21">
+  <div class="container">
+    <h1>Production Code</h1>
+    <pre><code>
+      ├── pom.xml
+      ├── src
+      │   ├── main
+      │   │   ├── java
+      │   │   ├── resources
+      │   │   ├── scala
+      │   │   └── webapp
+      │   └── test
+      │       ├── java
+      │       ├── resources
+      │       └── scala
+    </code></pre>
+  </div>
+</div>
+<div class="content" id="slide-22">
+  <div class="container">
+    <h1>Inside the Code…</h1>
+  </div>
+</div>
+<div class="content" id="slide-23">
+  <div class="container">
+    <h1>Data Visualization</h1>
+    <h2>Requires multiple hats</h2>
+    <img src="images/french-beret-black-550.jpg" style="display:inline;">
+    <img src="images/fedora.jpg" style="display:inline;">
+    <img src="images/wizardhat.jpg" style="display:inline;">
+  </div>
+</div>
+<div class="content" id="slide-24">
+  <div class="container">
+    <h1>Conclusion</h1>
+    <p>Where is your <strong>sombrero</strong>?</p>
+    <img src="images/3201sombrero.jpg">
+  </div>
+</div>
+</div>
+</div>
+</body>
+</html>

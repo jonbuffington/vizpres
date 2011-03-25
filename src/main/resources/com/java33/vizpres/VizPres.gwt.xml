@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2011 Jon Buffington. All rights reserved.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<module rename-to='vizpres'>
+  <!-- Inherit the core Web Toolkit stuff.                        -->
+  <inherits name='com.google.gwt.user.User'/>
+
+  <!-- Inherit the default GWT style sheet.  You can change       -->
+  <!-- the theme of your GWT application by uncommenting          -->
+  <!-- any one of the following lines.                            -->
+  <inherits name='com.google.gwt.user.theme.standard.Standard'/>
+  <!-- <inherits name='com.google.gwt.user.theme.chrome.Chrome'/> -->
+  <!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/>     -->
+
+  <!-- Use RestyGWT to build ReSTful requests and decode responses. -->
+  <inherits name='org.fusesource.restygwt.RestyGWT'/>
+
+  <!-- Use Google GIN for DI.                                     -->
+  <inherits name='com.google.gwt.inject.Inject'/>
+
+  <!-- Use Raphael for SVG.                                       -->
+  <inherits name='com.hydro4ge.raphaelgwt.RaphaelGWT'/>
+
+  <!-- Load the external Raphael JS file into the host page       -->
+  <!-- before the module entry point is called.                   -->
+  <script src='raphael-min.js'/>
+  <!--
+    <script src='g.raphael-min.js'/>
+    <script src='g.line-min.js'/>
+  -->
+
+  <!-- Use the Google Chart Tools (Visualization) API.            -->
+  <inherits name='com.google.gwt.visualization.Visualization'/>
+
+  <!-- Add logging support. -->
+  <inherits name='com.google.gwt.logging.Logging'/>
+  <set-property name='gwt.logging.logLevel' value='FINE'/>
+  <set-property name='gwt.logging.popupHandler' value='DISABLED'/>
+
+  <!-- Make logging output dependent upon a query string value. -->
+  <define-property name='dynamicLogging' values='TRUE, FALSE'/>
+  <property-provider name='dynamicLogging'>
+    <![CDATA[
+    if (window.location.href.indexOf('logging') != -1) {
+      return 'TRUE';
+    }
+    return 'FALSE';
+  ]]>
+  </property-provider>
+  <set-property name='gwt.logging.enabled' value='FALSE'>
+    <!-- Then disable logging. -->
+    <when-property-is name='dynamicLogging' value='FALSE'/>
+  </set-property>
+
+  <!-- Specify the app entry point class.                         -->
+  <entry-point class='com.java33.vizpres.client.VizPres'/>
+
+  <!-- Specify the paths for translatable code.                   -->
+  <source path='client'/>
+  <source path='shared'/>
+  <public path='public'/>
+</module>

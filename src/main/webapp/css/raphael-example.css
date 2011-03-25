@@ -1,0 +1,193 @@
+/*
+ * Copyright (c) 2011 Jon Buffington. All rights reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+body {
+  font-family: 'Arvo', arial, serif;
+  font-size: 13px;
+  color: #fff;
+  background-color: black;
+  margin: 0;
+  text-align: center;
+}
+
+img {
+  border: none;
+}
+
+#chart {
+  padding-top: 140px;
+}
+
+a:link, a:visited {
+  color: #32869F;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bevan', Georgia, serif;
+  font-weight: normal;
+}
+
+h3 {
+  font-family: 'Arvo', arial, serif;
+  font-size: 20px;
+  color: #eee;
+}
+
+h2 {
+  font-size: 36px;
+  margin: 0;
+}
+
+h1 {
+  font-size: 70px;
+  margin: 0;
+  color: #fff;
+}
+
+#wrapper {
+  display: none;
+}
+
+#top {
+  height: 300px;
+}
+
+.arrow {
+  display: block;
+  margin: 0px auto;
+  cursor: pointer;
+  width: 61px;
+  height: 61px;
+  background: url("../images/downarrow.png") -61px 0 no-repeat;
+  background-color: white;
+}
+
+.box_arrow {
+  position: absolute;
+  left: 50%;
+  margin-left: -30px;
+  bottom: 20px;
+}
+
+.arrow:hover {
+  background-position: 0 0;
+}
+
+#menu {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 30%;
+  text-align: left;
+  line-height: 15px;
+  padding: 0;
+  font-size: 15px;
+}
+
+#menu_list {
+  display: none;
+  list-style-type: none;
+  padding-left: 10px;
+  margin: 0;
+  line-height: 20px;
+}
+
+#menu_btn {
+  display: block;
+  text-align: center;
+  background-color: #32869F;
+  color: #FFF;
+  width: 22px;
+  padding: 3px 0;
+  cursor: pointer;
+  margin-bottom: 5px;
+  font-size: 13px;
+}
+
+#share {
+  width: 64px;
+  padding-left: 4px;
+  margin: 0px auto;
+}
+
+.menu_item {
+  cursor: pointer;
+}
+
+.menu_item:hover {
+  color: #32869F;
+  background-color: black;
+  opacity: 0.9;
+}
+
+.hidden {
+  display: none;
+}
+
+#num {
+  font-size: 34px;
+  color: #32869F;
+  margin: 10px 0;
+}
+
+#footer {
+  border-top: 1px solid #E0E0E0;
+}
+
+#optimist {
+  float: left;
+  padding: 70px;
+  color: #33ff77;
+}
+
+#pessimist {
+  float: right;
+  color: #ff7733;
+  padding: 70px;
+}
+
+p.cost {
+  font-family: 'Bevan', Georgia, serif;
+  font-size: 48px;
+
+}
+
+.box {
+  border-top: 1px solid #E0E0E0;
+  position: relative;
+}
+
+.vis {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.box p {
+  font-size: 11px;
+  color: #666;
+  line-height: 20px;
+  width: 600px;
+  margin: 15px auto;
+}
+
+#box2 .vis {
+  background: url("../images/starbucks.png") 50% 50% no-repeat;
+}

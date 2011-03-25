@@ -1,0 +1,107 @@
+<!--
+  ~ Copyright (c) 2011 Jon Buffington. All rights reserved.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'
+             xmlns:v='urn:import:com.java33.vizpres.client.view.visualization'>
+  <ui:style>
+    @external .gwt-TabLayoutPanel, .gwt-TabLayoutPanelTab, .gwt-TabLayoutPanelTab-selected, .gwt-TabLayoutPanelContent;
+
+    .header {
+      background-color: #669900;
+      float: none;
+      padding: .5em 1em;
+      text-align: center;
+    }
+
+    .title {
+      color: #fcfcfc;
+      float: left;
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    .button {
+      float: right;
+    }
+
+    .center {
+      background-color: #dbf7ad;
+    }
+
+    .gwt-TabLayoutPanel .gwt-TabLayoutPanelTab {
+      color: #f0f0f0;
+      background-color: #9bbf52;
+      font-size: 16px;
+      height: 1.5em;
+    }
+
+    .gwt-TabLayoutPanel .gwt-TabLayoutPanelTab-selected {
+      background-color: #698038;
+    }
+
+    .gwt-TabLayoutPanel .gwt-TabLayoutPanelContent {
+      background-color: #eef7de;
+      border-color: #698038;
+      border-width: 2px 0 1px 0;
+      padding: 20px 10px;
+    }
+
+    .footer {
+      padding: .5em 1em;
+    }
+
+    .copyright {
+      color: #999999;
+      font-size: 10px;
+    }
+  </ui:style>
+
+  <g:DockLayoutPanel unit="EM">
+    <g:north size="5">
+      <g:FlowPanel addStyleNames="{style.header}">
+        <g:Label addStyleNames="{style.title}" ui:field="titleText"/>
+        <g:Button addStyleNames="{style.button}" ui:field="refreshButton"/>
+      </g:FlowPanel>
+    </g:north>
+
+    <g:center>
+      <g:TabLayoutPanel addStyleNames="{style.center}" barHeight="4" barUnit="EM">
+        <g:tab>
+          <g:header>Google Chart Tools</g:header>
+          <v:GoogleCharts width="640" height="480" ui:field="googleChartBaseView"/>
+        </g:tab>
+        <g:tab>
+          <g:header>GWT Cell Widgets {GWT 2.1.0+}</g:header>
+          <v:CellViz width="640px" height="480px" ui:field="cellBasedView"/>
+        </g:tab>
+        <g:tab>
+          <g:header>Canvas 2D {GWT 2.2.0+}</g:header>
+          <v:CanvasViz width="640" height="480" ui:field="canvasBasedView"/>
+        </g:tab>
+        <g:tab>
+          <g:header>Scalable Vector Graphics {RaphaelJS 1.5.2}</g:header>
+          <v:RaphaelViz width="640" height="480" ui:field="raphaelBasedView"/>
+        </g:tab>
+      </g:TabLayoutPanel>
+    </g:center>
+
+    <g:south size="2">
+      <g:Label addStyleNames="{style.copyright} {style.footer}" ui:field="copyrightText"/>
+    </g:south>
+  </g:DockLayoutPanel>
+
+</ui:UiBinder>
